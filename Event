@@ -1,0 +1,55 @@
+ @PrimaryKey(autoGenerate = true)
+    @NonNull
+    @ColumnInfo(name = "Id")
+    private int Id;
+
+    @Nullable
+    @ColumnInfo(name = "Name")
+    private String Name;
+
+    private String Style;
+    
+public class Museum;
+ private int Id;
+ private String CreationDate;
+ private String Description; 
+ private String Place;
+ private int Score;
+ 
+ public int getId () {
+     return Id;
+ }
+ public void setId(int Id) {
+   this.mId = Id;
+ }
+ public String getCreationDate() {
+        return CreationDate;
+    }
+
+    public void setCreationDate(String CreationDate) {
+        CreationDate = CreationDate;
+    }
+
+    public String getDescription() {
+        return Description;
+    }
+
+    public void setDescription(String Description) {
+        Description = Description;
+    }
+
+    public int getPlace() {
+        return Place;
+    }
+
+    public void setPlace(int Place) {
+        Place = Place;
+    }
+
+    public String getScore() {
+        return Score;
+    }
+    public void setScore(int Score) {
+        Score = Score;
+    }
+ 
