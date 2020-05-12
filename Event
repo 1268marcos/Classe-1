@@ -9,12 +9,13 @@
 
     private String Style;
     
-public class Museum;
+public class Museum (@Nullable int Id, String CreationDate, String Description, String Place, int Score) {
  private int Id;
  private String CreationDate;
  private String Description; 
  private String Place;
  private int Score;
+}
  
  public int getId () {
      return Id;
