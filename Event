@@ -1,30 +1,43 @@
- @PrimaryKey(autoGenerate = true)
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "events")
+public class Event {
+
+
+@PrimaryKey(autoGenerate = true)
     @NonNull
     @ColumnInfo(name = "Id")
-    private int Id;
+    private int mId;
 
     @Nullable
-    @ColumnInfo(name = "Name")
-    private String Name;
+    @ColumnInfo(name = "Description")
+    private String mDescription;
 
-    private String Style;
+    private String mPlace;
     
-public class Museum (@Nullable int Id, String CreationDate, String Description, String Place, int Score) {
- private int Id;
- private String CreationDate;
- private String Description; 
- private String Place;
- private int Score;
+      private int mScore;
+      
+        private String mCreationDate;
+    
+public Event (String creationDate, String description, String place, int score) {
+  mCreationDate = creationDate;
+        mDescription = description;
+        mPlace = place;
+        mScore = score;
 }
  
  public int getId () {
-     return Id;
+     return mId;
  }
  public void setId(int Id) {
    this.mId = Id;
  }
  public String getCreationDate() {
-        return CreationDate;
+        return mCreationDate;
     }
 
     public void setCreationDate(String CreationDate) {
@@ -32,25 +45,28 @@ public class Museum (@Nullable int Id, String CreationDate, String Description, 
     }
 
     public String getDescription() {
-        return Description;
+        return mDescription;
     }
 
-    public void setDescription(String Description) {
-        Description = Description;
+    public void setDescription(String description) {
+        mDescription = description;
     }
 
-    public int getPlace() {
-        return Place;
+    public String getPlace() {
+        return mPlace;
     }
 
-    public void setPlace(int Place) {
-        Place = Place;
+    public void setPlace(String place) {
+        mPlace = place;
     }
 
-    public String getScore() {
-        return Score;
+    public int getScore() {
+        return mScore;
     }
-    public void setScore(int Score) {
-        Score = Score;
+    public void setScore(int score) {
+        mScore = score;
     }
  
+//fim da classe
+
+}
